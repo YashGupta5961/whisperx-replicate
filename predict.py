@@ -92,7 +92,8 @@ class Predictor(BasePredictor):
         with torch.inference_mode():
             asr_options = {
                 "temperatures": [temperature],
-                "initial_prompt": initial_prompt
+                "initial_prompt": initial_prompt,
+                "task": "translate"
             }
 
             vad_options = {
